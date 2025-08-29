@@ -1,13 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Mi TODO list</h1>
-    <script src="scripts/script.js"></script>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List de Sofy</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="start-screen">
+    <div class="welcome-card">
+      <h1>Bienvenido al To-Do List de Sofy</h1>
+      <p>Organiza tus ideas y logra más cada día</p>
+      <button id="btn-start">Empezar</button>
+    </div>
+  </div>
+
+  <div id="board" class="hidden">
+    <div class="board">
+      <header class="board-header">
+        <div id="date">Hoy es --/--/----</div>
+      </header>
+
+      <main class="board-main">
+        <section class="column">
+          <h3>Tareas de Trabajo</h3>
+          <button class="btn-add" id="btn-work">+ Agregar tarea</button>
+          <ul id="work" class="task-list"></ul>
+        </section>
+
+        <section class="column">
+          <h3>Tareas Personales</h3>
+          <button class="btn-add" id="btn-personal">+ Agregar tarea</button>
+          <ul id="personal" class="task-list"></ul>
+        </section>
+
+        <section class="column">
+          <h3>Notas rápidas</h3>
+          <button class="btn-add" id="btn-others">+ Agregar tarea</button>
+          <ul id="others" class="task-list"></ul>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
